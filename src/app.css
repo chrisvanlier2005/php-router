@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Cascadia Mono", "Courier New", Courier, monospace;
+}
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2a2a2a;
+    color: white;
+}
+.shadow-filter {
+    filter: drop-shadow(4px 4px 0rem rgba(0, 0, 0, 0.3));
+}
+.router-icon {
+    width: 8rem;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+    color: white;
+    fill: white;
+}
+a {
+    color: lightblue;
+}

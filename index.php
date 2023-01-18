@@ -11,6 +11,7 @@ use chrisvanlier2005\Router as Route;
 Route::get('/', [PageController::class, "index"]);
 Route::prefix('/users', function () {
     Route::get('/', [UserController::class, "index"]);
+    Route::get('/{id}', [UserController::class, "show"]);
 });
 Route::get('/{id}', [PageController::class, "show"]);
 

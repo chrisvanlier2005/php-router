@@ -12,8 +12,10 @@ class UserController extends Controller
     {
         return $this->view('user');
     }
-    public function show(Request $request, $id)
+    public function show(Request $request, $id): bool
     {
-        echo "this is the user show";
+        return $this->view("show", [
+            "id" => $id
+        ]);
     }
 }

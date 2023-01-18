@@ -212,7 +212,6 @@ class Router
     }
 
     public static function notFound($callback){
-        echo self::$routerInstance->success;
         if(!self::$routerInstance->success){
             $callback();
         }
