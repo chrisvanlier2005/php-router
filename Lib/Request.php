@@ -6,7 +6,6 @@ class Request
 
 {
 
-    private $joe = "joe";
 
     private $params = [];
 
