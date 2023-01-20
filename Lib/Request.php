@@ -11,51 +11,31 @@ class Request
 
     public function __construct()
     {
-
-        $getParams = $_GET;
-
-        foreach ($getParams as $key => $value){
-
+        foreach ($_GET as $key => $value) {
             $this->$key = $value;
-
             $this->params[$key] = $value;
-
         }
-
-
-
-    }
-
-
-
-    public function has($param){
-
-        if (isset($this->params[$param])){
-
-            return true;
-
+        foreach ($_POST as $key => $value) {
+            $this->$key = $value;
+            $this->params[$key] = $value;
         }
-
-        return false;
-
     }
-
-
-
-    public function all(){
-
-        return $this->params;
-
-    }
-
-
 
     public static function build()
+    {
+        return new Request();
+    }
 
+    public function has($param): bool
     {
 
-        return new Request();
+        return isset($this->params[$param]);
 
+    }
+
+    public function all(): array
+    {
+        return $this->params;
     }
 
 }
